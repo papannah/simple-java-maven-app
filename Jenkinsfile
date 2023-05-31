@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Publich Test Reports') {
             steps {
-                Junit '**target/surefire-reports/TEST*.xml'
+                Junit "**target/surefire-reports/TEST*.xml"
                 sh 'ls /var/lib/jenkins/workspace/New_Demo_Pipeline/server/target/surefire-reports/'
                 jacoco()
             }
